@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* ocupa a altura total da tela */
+    background-color: black; /* cor de fundo preto */
+    font-family: Arial, sans-serif; /* fonte do corpo */
+    color: white; /* cor do texto */
+}
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none; /* Escondido por padrão */
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
+    color: white; /* Texto branco */
+    z-index: 999; /* Em cima de outros elementos */
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #ffffff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hidden {
+    display: none; /* oculta o elemento */
+}
+
+#pdf-canvas {
+    width: 100vw; /* ocupa toda a largura da tela */
+    height: 100vh; /* ocupa toda a altura da tela */
+    border: 1px solid #fff; /* adiciona uma borda branca ao canvas */
+    object-fit: contain; /* mantém a proporção do conteúdo */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* largura do contêiner */
+    height: 100%; /* altura do contêiner */
+    text-align: center; /* centraliza o texto */
+}
+
+h1 {
+    margin-bottom: 10px; /* espaçamento abaixo do título */
+    font-size: 2rem; /* tamanho da fonte do título */
+}
+
+p {
+    margin-bottom: 20px; /* espaçamento abaixo do parágrafo */
+    font-size: 1.2rem; /* tamanho da fonte do parágrafo */
+    color: #ccc; /* cor do texto */
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Apresentador de Slides</title>
+</head>
+<body>
+    <div class="container">
+        <div class="upload-container" id="upload-container">
+            <h1>Bem-vindo</h1>
+            <p>Você pode usar o aplicativo 'Clicker - Para Apresentações' para passar slides. Certifique-se de que seus slides estão no formato 16:9.</p>
+            <input type="file" id="file-input" accept="application/pdf" />
+            <button id="upload-button">Enviar PDF</button>
+        </div>
+
+        <div class="hidden" id="presentation-container">
+            <canvas id="pdf-canvas"></canvas>
+            <div id="loader" class="hidden">
+                <p>Carregando...</p>
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
